@@ -31,6 +31,6 @@ model User {
   designation String
   dob DateTime @db.Date
   is_active Boolean @default(true)
-  company Company? @relation(fields: [companyId], references: [id])
+  company Company? @relation(fields: [companyId], references: [id], onDelete: SetNull)
   companyId Int?
 }

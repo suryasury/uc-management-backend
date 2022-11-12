@@ -10,6 +10,7 @@ module.exports = (app) => {
   userRouter.get("/get-user/:id", user.getUser);
   userRouter.delete("/delete/:id", user.deleteUser);
   userRouter.put("/update", user.updateUser);
+  userRouter.put("/change-status", user.changeUserActiveStatus);
 
   companyRouter.post("/add-company", company.addCompany);
   companyRouter.get("/list-companies", company.getCompany);
